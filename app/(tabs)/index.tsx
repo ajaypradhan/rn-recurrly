@@ -14,6 +14,9 @@ import dayjs from "dayjs";
 import { styled } from "nativewind";
 import { useState } from "react";
 import { FlatList, Image, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { styled } from "nativewind";
+import { Text } from "react-native";
 import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
 const SafeAreaView = styled(RNSafeAreaView);
 
@@ -94,6 +97,11 @@ export default function Index() {
         }
         contentContainerClassName="pb-30"
       />
+      <Text className="text-xl font-bold text-blue-500">
+        Welcome to Nativewind!
+      </Text>
+      <Link href="/onboarding">on</Link>
+      <Link href="/(auth)/sign-in">sign in</Link>
     </SafeAreaView>
   );
 }
